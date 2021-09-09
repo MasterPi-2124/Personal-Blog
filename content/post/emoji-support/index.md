@@ -1,16 +1,40 @@
-+++
-author = "Hugo Authors"
-title = "Emoji Support"
-date = "2019-03-05"
-description = "Guide to emoji usage in Hugo"
-categories = [
-    "Test"
-]
-tags = [
-    "emoji",
-]
-image = "the-creative-exchange-d2zvqp3fpro-unsplash.jpg"
-+++
+---
+# Name of the article
+title: "Emoji Support"
+
+# Quick description
+description: Lorem ipsum dot sit amet
+
+# Author of the article
+author: Master Pi
+
+# Date created
+date: "2021-09-09"
+
+# Article's tags
+tags: 
+  - emoji
+  - examples
+
+# Article's categories: Blog, Project or Guideline
+categories:
+  - Blog
+
+# Useful to link articles together for "See also" part
+series: "How to make a post with markdown"
+
+# is Math included? Default: false
+math: false
+
+# Cover image of the article
+image: the-creative-exchange-d2zvqp3fpro-unsplash.jpg
+
+# Is drafted? If true, the article will not be shown on website. Default: true, change to "false" when finish
+draft: false
+
+# Appears as the tail of the output URL.
+slug: "emoji-support"
+---
 
 Emoji can be enabled in a Hugo project in a number of ways. 
 <!--more-->

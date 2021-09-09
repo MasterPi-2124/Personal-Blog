@@ -5,7 +5,7 @@ paginate: 5
 title: Master Pi
 
 # Change it to your Disqus shortname before using
-disqusShortname: hugo-theme-stack
+disqusShortname: masterpi007
 
 # GA Tracking ID
 googleAnalytics:
@@ -121,7 +121,7 @@ params:
             limit: 5
 
         tagCloud:
-            limit: 10
+            limit: 20
 
     opengraph:
         twitter:
@@ -163,35 +163,27 @@ menu:
           params:
               newTab: false
 
-        - identifier: about
-          name: About
-          url: /about
+        - identifier: blog
+          name: Blog
+          url: /categories/blog/
           weight: 2
-          pre: user
-          params:
-              newTab: false
-
-        - identifier: post
-          name: Post
-          url: /archives
-          weight: 3
-          pre: archives
+          pre: blogs
           params:
               newTab: false
 
         - identifier: project
-          name: Projects
-          url: /
-          weight: 4
-          pre: home
+          name: Project
+          url: /categories/project/
+          weight: 3
+          pre: projects
           params:
               newTab: false
 
-        - identifier: guide
-          name: Guide
-          url: /
-          weight: 5
-          pre: home
+        - identifier: guidelines
+          name: Guideline
+          url: /categories/guideline/
+          weight: 4
+          pre: guidelines
           params:
               newTab: false
 
@@ -202,16 +194,24 @@ menu:
           pre: search
           params:
               newTab: false
+
+        - identifier: about
+          name: About
+          url: /about
+          weight: 6
+          pre: user
+          params:
+              newTab: false
+
 related:
     includeNewer: true
     threshold: 60
     toLower: false
-    indices:
+    indices:        
+        - name: series
+          weight: 1
         - name: tags
-          weight: 100
-
-        - name: categories
-          weight: 200
+          weight: 2
 
 markup:
     goldmark:

@@ -1,9 +1,39 @@
 ---
-author: Hugo Authors
-title: Math Typesetting
-date: 2019-03-08
-description: A brief guide to setup KaTeX
+# Name of the article
+title: "Math Typesetting"
+
+# Quick description
+description: Lorem ipsum dot sit amet
+
+# Author of the article
+author: Master Pi
+
+# Date created
+date: "2019-09-09"
+
+# Article's tags
+tags: 
+    - Katex
+    - examples
+
+# Article's categories: Blog, Project or Guideline
+categories:
+    - Blog
+
+# Useful to link articles together for "See also" part
+series: "How to make a post with markdown"
+
+# is Math included? Default: false
 math: true
+
+# Cover image of the article
+image: 
+
+# Is drafted? If true, the article will not be shown on website. Default: true, change to "false" when finish
+draft: false
+
+# Appears as the tail of the output URL.
+slug: "math-typesetting"
 ---
 
 Mathematical notation in a Hugo project can be enabled by using third party JavaScript libraries.

@@ -1,4 +1,4 @@
-{{- $query := first 1 (where .Site.Pages "Layout" "==" "archives") -}}
+{{- $query := first 1 (where .Site.Pages "Layout" "==" "") -}}
 {{- if $query -}}
     {{- $archivesPage := index $query 0 -}}
     <section class="widget archives">
@@ -16,7 +16,7 @@
             {{ range $index, $item := first (add .Site.Params.widgets.archives.limit 1) ($archives) }}
                 {{- $id := lower (replace $item.Key " " "-") -}}
                 <div class="archives-year">
-                    <a href="{{ $archivesPage.RelPermalink }}#{{ $id }}">
+                    <a>
                         {{ if eq $index $.Site.Params.widgets.archives.limit }}
                             <span class="year">{{ T "widget.archives.more" }}</span>
                         {{ else }}
