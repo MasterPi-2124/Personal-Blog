@@ -9,7 +9,7 @@ description: Lorem ipsum dot sit amet
 author: Master Pi
 
 # Date created
-date: 2021-9-02
+date: 2021-09-02
 
 # Article's tags
 tags: 

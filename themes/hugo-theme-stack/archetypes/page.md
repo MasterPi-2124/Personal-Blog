@@ -3,6 +3,7 @@
 title: "{{ replace .Name "-" " " | title }}"
 description: #Your description here
 date: {{ .Date }}
+
 image: 
 
 # Layout of the page, which can be extract from theme/layouts/_default or layouts/_default
@@ -21,7 +22,6 @@ license:
 hidden: false
 
 # Allow comments?
-comments: true
-# Is draft? If true, the page will not be shown
-draft: true
+comments: false
+
 ---

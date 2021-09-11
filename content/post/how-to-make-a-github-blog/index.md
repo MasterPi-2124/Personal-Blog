@@ -9,7 +9,7 @@ description: Not so hard as you think, but takes some time to play with it
 author: Master Pi
 
 # Date created
-date: 2021-09-10T01:42:12+07:00
+date: 2021-09-10
 
 # Article's tags
 tags: 
@@ -29,9 +29,6 @@ math: false
 
 # Cover image of the article
 image: cover.png
-
-# Is drafted? If true, the article will not be shown on website. Default: true, change to "false" when finish
-draft: false
 
 # Appears as the tail of the output URL.
 slug: "how-to-make-a-github-blog"

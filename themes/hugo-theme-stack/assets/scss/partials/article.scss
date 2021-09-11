@@ -40,7 +40,7 @@
         @for $i from 1 through length($defaultTagBackgrounds) {
             &:nth-child(#{length($defaultTagBackgrounds)}n + #{$i}) {
                 .article-tags a {
-                    background: nth($defaultTagBackgrounds, $i);
+                    background: nth($defaultTagBackgrounds, random(length($defaultTagBackgrounds)));
                     color: nth($defaultTagColors, $i);
                 }
             }
@@ -119,8 +119,6 @@
 
 .article-tags {
     a {
-        color: var(--accent-color-text);
-        background-color: var(--accent-color);
         padding: 8px 16px;
         border-radius: var(--tag-border-radius);
         display: inline-block;
@@ -128,7 +126,13 @@
         margin-right: 10px;
         margin-bottom: 10px;
         transition: background-color 0.5s ease;
-
+        
+        @for $i from 1 through length($defaultTagBackgrounds) {
+            &:nth-child(#{length($defaultTagBackgrounds)}n + #{$i}) {
+                background: nth($defaultTagBackgrounds, random(length($defaultTagBackgrounds)));
+                color: nth($defaultTagColors, $i);
+            }
+        }
         &:hover {
             color: var(--accent-color-text);
             background-color: var(--accent-color-darker);

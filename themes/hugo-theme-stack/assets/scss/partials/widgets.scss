@@ -16,12 +16,15 @@
         flex-wrap: wrap;
 
         a {
-            background: var(--card-background);
             box-shadow: var(--shadow-l1);
             border-radius: var(--tag-border-radius);
             padding: 8px 20px;
-
-            color: var(--card-text-color-main);
+            @for $i from 1 through length($defaultTagBackgrounds) {
+                &:nth-child(#{length($defaultTagBackgrounds)}n + #{$i}) {
+                    background: nth($defaultTagBackgrounds, random(length($defaultTagBackgrounds)));
+                    color: nth($defaultTagColors, $i);  
+                }
+            }
             margin-bottom: 10px;
             margin-right: 5px;
             font-size: 1.4rem;

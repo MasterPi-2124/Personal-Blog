@@ -3,6 +3,7 @@ languageCode: en-us
 theme: hugo-theme-stack
 paginate: 5
 title: Master Pi
+enableGitInfo: true
 
 # Change it to your Disqus shortname before using
 disqusShortname: masterpi007
@@ -47,7 +48,7 @@ params:
         readingTime: true
         license:
             enabled: true
-            default: Licensed under CC BY-NC-SA 4.0
+            default: LICENSED UNDER CC BY-NC-SA 4.0
 
     comments:
         enabled: true
@@ -196,7 +197,7 @@ menu:
               newTab: false
 
         - identifier: about
-          name: About
+          name: About me
           url: /about
           weight: 6
           pre: user
@@ -217,10 +218,10 @@ markup:
     goldmark:
         renderer:
             ## Set to true if you have HTML content inside Markdown
-            unsafe: false
+            unsafe: true
     tableOfContents:
-        endLevel: 4
+        endLevel: 5
         ordered: true
-        startLevel: 2
+        startLevel: 1
     highlight:
         noClasses: false

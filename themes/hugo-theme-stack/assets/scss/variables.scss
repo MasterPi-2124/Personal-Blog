@@ -1,5 +1,5 @@
-$defaultTagBackgrounds: #8ea885, #df7988, #0177b8, #ffb900, #6b69d6;
-$defaultTagColors: #fff, #fff, #fff, #fff, #fff;
+$defaultTagBackgrounds: #8ea885, #df7988, #0177b8, #ffb900, #6b69d6, #7bbc59, #e494b4, #df4305, #63AAF4, #BCEAED, #B23B4F, #F483B2, #1AA801, #FCD404, #650AA1, #F05B51;
+$defaultTagColors: #fff, #fff, #fff, #fff, #fff, #fff, #fff, #fff, #fff, #fff, #fff, #fff, #fff, #fff, #fff, #fff;
 
 [data-scheme="light"] {
     --pre-text-color: #272822;
@@ -94,7 +94,7 @@ $defaultTagColors: #fff, #fff, #fff, #fff, #fff;
     &[data-scheme="dark"] {
         --card-background: #28293D;
         --card-background-selected: rgba(97, 97, 97, 0.342);
-        --card-text-color-main: rgba(255, 255, 255, 0.9);
+        --card-text-color-main: rgba(255, 255, 255, 0.8);
         --card-text-color-secondary: rgba(255, 255, 255, 0.7);
         --card-text-color-tertiary: rgba(255, 255, 255, 0.5);
         --card-separator-color: rgba(255, 255, 255, 0.12);
@@ -128,9 +128,9 @@ $defaultTagColors: #fff, #fff, #fff, #fff, #fff;
     --link-background-opacity: 0.5;
     --link-background-opacity-hover: 0.7;
 
-    --pre-background-color: #fafafa;
+    --pre-background-color: rgb(241, 241, 241);
     --pre-text-color: #272727;
-    --code-background-color: rgba(41, 41, 41, 0.123);
+    --code-background-color: rgb(228, 228, 228);
     --code-text-color: #2c2c2c;
 
     --table-border-color: #dadada91;
@@ -138,10 +138,13 @@ $defaultTagColors: #fff, #fff, #fff, #fff, #fff;
 
     &[data-scheme="dark"] {
         --code-text-color: rgba(255, 255, 255, 0.9);
+        --link-background-color: 87, 93, 143;
         --pre-background-color: #31324b;
-        --pre-text-color: #ffffff;
+        --pre-text-color: #e4e4e4;
         --code-background-color: rgba(255, 255, 255, 0.123);
         --blockquote-background-color: rgb(49, 50, 75);
+        --table-border-color: #dadada91;
+        --tr-even-background-color: #e0e0e033;
     }
 }
 
@@ -151,7 +154,7 @@ $defaultTagColors: #fff, #fff, #fff, #fff, #fff;
 */
 :root {
     --shadow-l1: 0px 2px 20px rgba(0, 0, 0, 0.1), 0px 0px 2px rgba(0, 0, 0, 0), 0px 0px 1px rgba(0, 0, 0, 0);
-    --shadow-l2: 0px 10px 20px rgba(0, 0, 0, 0.04), 0px 2px 6px rgba(0, 0, 0, 0.04), 0px 0px 1px rgba(0, 0, 0, 0.04);
+    --shadow-l2: 0px 10px 20px rgba(0, 0, 0, 0.2), 0px 2px 6px rgba(0, 0, 0, 0.04), 0px 0px 1px rgba(0, 0, 0, 0.04);
     --shadow-l3: 0px 10px 20px rgba(0, 0, 0, 0.04), 0px 2px 6px rgba(0, 0, 0, 0.04), 0px 0px 1px rgba(0, 0, 0, 0.04);
     --shadow-l4: 0px 24px 32px rgba(0, 0, 0, 0.04), 0px 16px 24px rgba(0, 0, 0, 0.04), 0px 4px 8px rgba(0, 0, 0, 0.04),
         0px 0px 1px rgba(0, 0, 0, 0.04);

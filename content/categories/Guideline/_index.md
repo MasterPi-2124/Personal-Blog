@@ -1,6 +1,6 @@
 ---
 title: "Guideline"
-description: "My tips and tricks in development"
+description: "How to live?"
 slug: "guideline"
 image: "guidelineBackground.jpg"
 style:

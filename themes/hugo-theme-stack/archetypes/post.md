@@ -8,9 +8,23 @@ description: Lorem ipsum dot sit amet
 # Author of the article
 author: Master Pi
 
+# Appears as the tail of the output URL.
+slug: "{{ .Name | lower }}"
+
 # Date created
 date: {{ .Date }}
 
+# Date published. Before that day, the post can not be available
+publishDate: 
+
+# Daye expired. After that day, the post cab not be available
+expiryDate:
+
+# Last modified time of the file
+lastmod: 
+    - :fileModTime
+    - :git
+    
 # Article's tags
 tags: 
 
@@ -28,10 +42,5 @@ math: false
 # Cover image of the article
 image: 
 
-# Is drafted? If true, the article will not be shown on website. Default: true, change to "false" when finish
-draft: true
-
-# Appears as the tail of the output URL.
-slug: "{{ .Name | lower }}"
 ---
 

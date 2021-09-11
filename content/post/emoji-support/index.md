@@ -9,7 +9,7 @@ description: Lorem ipsum dot sit amet
 author: Master Pi
 
 # Date created
-date: "2021-09-09"
+date: 2021-09-09
 
 # Article's tags
 tags: 
@@ -28,9 +28,6 @@ math: false
 
 # Cover image of the article
 image: the-creative-exchange-d2zvqp3fpro-unsplash.jpg
-
-# Is drafted? If true, the article will not be shown on website. Default: true, change to "false" when finish
-draft: false
 
 # Appears as the tail of the output URL.
 slug: "emoji-support"
