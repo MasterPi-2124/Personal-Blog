@@ -20,15 +20,6 @@ git commit -m "$msg"
 git push
 echo ""
 
-# Add this repos changes to git and commit/push. First 'cd' out of public
-cd ..
-echo ""
-echo ""
-echo "Committing changes to $(pwd)"
-git add .
-git commit -m "$msg"
-git push
-
 # Commit and push to site repository
 printf "\033[0;32mGo to root...\033[0m\n"
 cd ..
