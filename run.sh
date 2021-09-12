@@ -5,7 +5,7 @@ set -e
 
 # Build the project
 printf "\033[0;32mDeploying updates to GitHub...\033[0m\n"
-hugo -D
+hugo -D --buildFuture
 
 echo ""
 
@@ -29,5 +29,5 @@ read -p "Enter your commit message: " msg
 echo "\033[0;32mCommitting changes...\033[0m\n"
 git commit -m "$msg"
 git push
-printf "\033[0;32mChanges are commited and push successfully! Go to masterpi-2124.github.io to see.\033[0m\n"
+printf "\033[0;32mChanges are commited and push successfully! Go to https://masterpi-2124.github.io to see.\033[0m\n"
 printf "\033[0;32mFinishing...\033[0m\n"
