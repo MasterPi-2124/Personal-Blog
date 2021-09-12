@@ -20,6 +20,9 @@ tags:
 categories:
     - Blog
 
+# Allow share?
+socialShare: true
+
 # Useful to link articles together for "See also" part
 series: "How to make a post with markdown"
 
@@ -40,7 +43,7 @@ Hugo ships with several [Built-in Shortcodes](https://gohugo.io/content-manageme
 <!--more-->
 ---
 
-## YouTube Privacy Enhanced Shortcode
+# YouTube Privacy Enhanced Shortcode
 
 {{< youtube ZJthWmvUzzc >}}
 
@@ -48,7 +51,7 @@ Hugo ships with several [Built-in Shortcodes](https://gohugo.io/content-manageme
 
 ---
 
-## Twitter Simple Shortcode
+# Twitter Simple Shortcode
 
 {{< twitter_simple 1085870671291310081 >}}
 
@@ -56,6 +59,6 @@ Hugo ships with several [Built-in Shortcodes](https://gohugo.io/content-manageme
 
 ---
 
-## Vimeo Simple Shortcode
+# Vimeo Simple Shortcode
 
 {{< vimeo_simple 48912912 >}}

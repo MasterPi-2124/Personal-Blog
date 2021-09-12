@@ -36,7 +36,7 @@ params:
 
     sidebar:
         emoji: 🙃
-        subtitle: Hi, I am Minh. Here is my blog about my researches, tips, ....
+        subtitle: Hi, I'm Minh. I'm a student, and a researcher. More at About page.
         avatar:
             enabled: true
             local: true
@@ -117,12 +117,16 @@ params:
             - search
             - archives
             - tag-cloud
+            - subscribe
 
         archives:
-            limit: 5
+            limit: 3
 
         tagCloud:
             limit: 20
+        
+        subscribe:
+            tinyletter: https://tinyletter.com/masterpi007
 
     opengraph:
         twitter:
@@ -150,6 +154,14 @@ params:
             enabled: true
         content:
             enabled: true
+
+    social:
+        share: 
+            facebook: true
+            linkedin: true
+            twitter: true
+            email: true
+        socialshare: true
 
 ### Custom menu
 ### See https://docs.stack.jimmycai.com/configuration/custom-menu.html

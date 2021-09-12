@@ -42,8 +42,13 @@
                 .article-tags a {
                     background: nth($defaultTagBackgrounds, random(length($defaultTagBackgrounds)));
                     color: nth($defaultTagColors, $i);
+                    &:hover {
+                        color: var(--accent-color-text);
+                        background-color: var(--accent-color-darker);
+                    }
                 }
             }
+
         }
     }
 }

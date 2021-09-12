@@ -20,6 +20,9 @@ tags:
 categories:
     - Blog
 
+# Allow share?
+socialShare: true
+
 # Useful to link articles together for "See also" part
 series: "How to make a post with markdown"
 
@@ -65,7 +68,7 @@ In this example we will be using [KaTeX](https://katex.org/)
 {{ end }}
 {{</ math.inline >}}
 
-### Examples
+## Examples
 
 {{< math.inline >}}
 <p>

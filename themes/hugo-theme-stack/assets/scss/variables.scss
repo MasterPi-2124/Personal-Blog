@@ -1,5 +1,5 @@
-$defaultTagBackgrounds: #8ea885, #df7988, #0177b8, #ffb900, #6b69d6, #7bbc59, #e494b4, #df4305, #63AAF4, #BCEAED, #B23B4F, #F483B2, #1AA801, #FCD404, #650AA1, #F05B51;
-$defaultTagColors: #fff, #fff, #fff, #fff, #fff, #fff, #fff, #fff, #fff, #fff, #fff, #fff, #fff, #fff, #fff, #fff;
+$defaultTagBackgrounds: #8ea885, #df7988, #0177b8, #ffb900, #6b69d6, #7bbc59, #e494b4, #df4305, #63AAF4, #B23B4F, #F483B2, #1AA801, #650AA1, #F05B51;
+$defaultTagColors: #fff, #fff, #fff, #fff, #fff, #fff, #fff, #fff, #fff, #fff, #fff, #fff, #fff, #fff;
 
 [data-scheme="light"] {
     --pre-text-color: #272822;
@@ -35,6 +35,8 @@ $defaultTagColors: #fff, #fff, #fff, #fff, #fff, #fff, #fff, #fff, #fff, #fff, #
     --tag-border-radius: 4px;
 
     --section-separation: 50px;
+
+    --widget-separation: 20px;
 
     --scrollbar-thumb: hsl(0, 0%, 85%);
     --scrollbar-track: var(--body-background);

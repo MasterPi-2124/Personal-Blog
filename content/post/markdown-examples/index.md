@@ -19,6 +19,10 @@ tags:
 # Article's categories: Blog, Project or Guideline
 categories:
     - Blog
+
+# Allow share?
+socialShare: true
+
 # Useful to link articles together for "See also" part
 series: "How to make a post with markdown"
 

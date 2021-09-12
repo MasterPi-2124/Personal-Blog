@@ -33,6 +33,9 @@ tags:
 categories:
 
 
+# Allow share?
+socialShare: true
+
 # Useful to link articles together for "See also" part
 series: 
 

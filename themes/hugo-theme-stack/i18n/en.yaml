@@ -1,8 +1,10 @@
 toggleMenu:
     other: Toggle Menu
 
-darkMode:
-    other: Dark Mode
+theme:
+    light: Light Theme 
+    dark: Dark Theme
+
 
 list:
     page:
@@ -32,6 +34,8 @@ article:
     readingTime:
         one: "{{ .Count }} minute read"
         other: "{{ .Count }} minute read"
+    share:
+        other: Share
 
 notFound:
     title:
@@ -51,6 +55,12 @@ widget:
     tagCloud:
         title:
             other: Tags
+
+    subscribe:
+        title:
+            other: Subscribe
+        label:
+            other: Wanna join the journey with me? 
 
 search:
     title:

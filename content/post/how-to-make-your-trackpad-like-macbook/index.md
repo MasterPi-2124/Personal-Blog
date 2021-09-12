@@ -3,7 +3,7 @@
 title: "How to Make Your Trackpad Like Macbook"
 
 # Quick description
-description: We all agree on Mac's trackpad, nothing to debate about that. Non-Macs can also do that (not really much), and here is how.
+description: We all agree on Mac's trackpad, nothing to debate about that. Non-Macs can also do that (not really much), and here is how
 
 # Author of the article
 author: Master Pi
@@ -20,6 +20,9 @@ tags:
 # Article's categories: Blog, Project or Guideline
 categories:
     - Guideline
+
+# Allow share?
+socialShare: true
 
 # Useful to link articles together for "See also" part
 series: 
@@ -38,13 +41,13 @@ If you used Mac products before, I bet the only thing you will never forget is i
 
 In this blog, we will dive into how we can make our trackpad as close to Mac experience as we can get with *`mtrack`*.
 
-## Why ***mtrack***?
+# Why ***mtrack***?
 In Linux, there are 3 options for mouse driver: *mtrack*, *libinput* and *synaptics*, but the default driver for almost every Linux distro *libinput* doesn't have many options for us to tweak, while *mtrack* has many flexible configurations, and supports a lot of gestures. The only downside of *mtrack* is it's quite [outdate](https://github.com/BlueDragonX/xf86-input-mtrack) (since 2015), so we will have to clone the community's driver from [GitHub](https://github.com/p2rkw/xf86-input-mtrack).
 
 And be noted that *mtrack* supports only <cite>**Xorg** environment.[^1]</cite>
 [^1]: It doesn't work on *Wayland* environment, but I'm fine about that because *Xorg* is more popular and has better performance and resource usage.
 
-## Install the driver
+# Install the driver
 First, we need to install the prerequisites for the driver:
 ```bash
 sudo apt update && sudo apt upgrade
@@ -60,10 +63,10 @@ sudo make
 sudo make install
 ```
 If you get stuck on the install progress, leave me a comment down there.
-## Configure the new driver
+# Configure the new driver
 If the install progress is successfull, the driver should be in the system, but we still need to edit the configuration file so that the system could recognize and use it.
 
-### Configuration file
+## Configuration file
 The configuration file gets placed in `/usr/share/X11/xorg.conf.d/50-mtrack.conf` and it contains options for the trackpad too. We will edit this file and <cite>**restart the system**[^2]</cite> to make changes.
 
 [^2]: The only way to make it work is by restarting *X Server*, but you can't just run `startx` or log out and log in again, so my official reccommendation is restarting the system. 
@@ -80,7 +83,7 @@ Identifier	"Touchpads"
 MatchDevicePath "/dev/input/event*"
 Driver		"mtrack"
 
-## Basic
+# Basic
 # Disable Trackpad
 Option		"TrackpadDisable"		"false"
 # Whether or not to enable physical button on trackpad
@@ -88,7 +91,7 @@ Option          "ButtonEnable"                  "true"
 # If the button is integrated into the trackpad like Macbook Pros, this option has to be "true"
 Option          "ButtonIntegrated"              "false"
 
-## Responsiveness
+# Responsiveness
 # The faster you move, the more distance pointer will travel, using "polynomial" profile
 Option          "AccelerationProfile"		"2"
 # Sensitivity controls how fast your cursor will move. 1 is the default
@@ -115,7 +118,7 @@ Option          "DisableOnPalm"                 "false"
 # Palms are expected to be very large on the trackpad
 Option          "PalmSize"                      "40"      
 
-## Zones
+# Zones
 # Whether or not to enable button zones.
 # If button zones are enabled then the trackpad will be
 # split into one, two, or three vertical zones
@@ -134,7 +137,7 @@ Option		"ThirdZoneButton"		"0"
 # the zone is limited to the percentage set for the "EdgeBottom".
 Option		"LimitButtonZonesToBottomEdge"	"false"
 
-## Physical Click
+# Physical Click
 # Which button to emulate when no valid finger placement
 # is touching the trackpad during a click, as on "EdgeBottom".
 Option		"ClickFinger0"			"0"
@@ -149,7 +152,7 @@ Option		"ButtonMoveEmulate"		"true"
 # How long (in ms) to consider a touching finger as part of button emulation.
 Option		"ButtonTouchExpire"		"100"
 
-## Tap
+# Tap
 # Which button to emulate for one-finger tapping.
 Option          "TapButton1"			"1"
 # Which button to emulate for two-finger tapping.
@@ -166,7 +169,7 @@ Option		"MaxTapTime"			"120"
 # How far a touch is allowed to move before counting it is no longer considered a tap.
 Option		"MaxTapMove"			"400"
 
-## Gesture
+# Gesture
 # When a gesture triggers a click, how much time to hold down the emulated button.
 Option		"GestureClickTime"		"10"
 # Touches are allowed to transition from one gesture to another.
@@ -256,7 +259,7 @@ Option		"RotateLeftButton"		"14"
 # For two finger rotation. The button that is triggered by rotating right.
 Option		"RotateRightButton"		"15"
 
-## Edge
+# Edge
 # The size of an area at the top of the trackpad where new touches are ignored
 # (fingers travelling into this area from the bottom will still be tracked).
 Option		"EdgeTopSize"			"0"
@@ -270,7 +273,7 @@ Option          "EdgeLeftSize"                  "0"
 # (fingers travelling into this area from the bottom will still be tracked).
 Option          "EdgeRightSize"                 "0"
 
-## Special Features
+# Special Features
 # For two finger hold-and-move functionality. The button that is triggered
 # by holding one finger and moving another one.
 Option		"Hold1Move1StationaryButton"	"1"
@@ -300,7 +303,7 @@ EndSection
 It's quite long, but it contains all options for the trackpad with the detail explaination, so you don't need to search google for any other options. My configuration above is as close as my Mac experience as I can get, and you can adjust to suit your need too.
 
 More tweaks, head to the driver's [README](https://github.com/p2rkw/xf86-input-mtrack).
-### Disable when typing
+## Disable when typing
 As the title, the most annoying thing when using *mtrack* is that it is not disable when typing, if you set option `TapButton1` to `1`. So we will need `dispad`, a daemon from the origion authors of *mtrack*:
 ```bash
 sudo apt install libconfuse-dev libxi-dev
@@ -312,7 +315,7 @@ sudo make install
 ```
 After built successfully, start the daemon by typing `dispad`.
 
-### Add more gestures
+## Add more gestures
 Currently, *mtrack* supports up to 15 mouse simulations, however, Ubuntu and some other distros only uses mouse buttons up to 9. To make use of other gestures, we will need some tools.
 ```bash
 sudo apt install xbindkeys xdotool
@@ -322,7 +325,7 @@ sudo apt install xbindkeys xdotool
 
 To define the rule, we need to edit the configuration file which is at `~/.xbindkeysrc`, and the detail of the tool is here if you need to see: https://wiki.archlinux.org/title/Xbindkeys.
 
-## Conclusion
+# Conclusion
 That’s my setup for multi-touch touchpad, and it is the as closest as Mac experience I can get. However, there still are some issues with *mtrack* driver after a lot of use, which is minor and do not affect the experience much:
 - Scroll coast are sometimes sticky and make scroll move quickly in subsequence scroll gestures.
 - Dispad sometimes doesn’t detect typing and lets the caret jump.

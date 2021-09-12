@@ -24,6 +24,10 @@
                     background: nth($defaultTagBackgrounds, random(length($defaultTagBackgrounds)));
                     color: nth($defaultTagColors, $i);  
                 }
+                &:hover {
+                    color: var(--accent-color-text);
+                    background-color: var(--accent-color-darker);
+                }
             }
             margin-bottom: 10px;
             margin-right: 5px;
@@ -66,4 +70,23 @@
             }
         }
     }
+}
+
+.widget.subscribe {
+    position: relative;
+
+    .subscribe-label {
+        position: bottom;
+        left: 0%;
+        top: 50%;
+        color: var(--body-text-color);
+    }
+
+    .subscribe-link {
+        &:hover {
+            color: var(--accent-color-darker);
+            box-shadow: 0px -2px 0px rgba(var(--link-background-color), var(--link-background-opacity-hover)) inset;
+        }
+    }
+
 }

@@ -21,6 +21,9 @@ tags:
 categories:
     - Guideline
 
+# Allow share?
+socialShare: true
+
 # Useful to link articles together for "See also" part
 series: 
 
@@ -36,21 +39,21 @@ slug: "how-to-make-a-github-blog"
 
 Hi, this is my way to make a Github blog for my self, which will contain blogs, some projects, and some tips from my experience. I am a webasite newbie, so it took me almost 2 days to setup from start to finish, and it's pretty easy. Here is how I made it.
 
-## Initial setup
-### Create repositories
+# Initial setup
+## Create repositories
 First, let take a look at what a [Github Page](https://pages.github.com/) is, and how to create one. You should be able to create a repository for your Github Page named `username.github.io`, where username is your Github username.
 
 The repository above will store the content of your website, but we will create another repository where the website development/authoring will take place, for example, `Personal-Blog`.   
 
-### Install Hugo
+## Install Hugo
 
 There are multiple ways to install **Hugo**:
 - Install from binary releases on [Github](https://github.com/gohugoio/hugo/releases). I reccommend installing the **extended** version, because some themes will run only on this version.
 - On a Mac with `Homebrew` installed, run `brew install hugo`
 - On Windows with `Chocolatey`: `choco install hugo[-extended] -confirm`
 
-## Create a site
-### Initialize a new site
+# Create a site
+## Initialize a new site
 Let's clone 2 repositories we created above to start:
 ```
 git clone https://github.com/username/Personal-Blog.git
@@ -73,7 +76,7 @@ site_root
 ```
 The detail explaination for each folder is published on [Hugo documentation](https://gohugo.io/getting-started/directory-structure/), and it is necessary to understand it before continue.
 
-### Install theme
+## Install theme
 Next, we wll pick a theme at [Hugo theme website](https://themes.gohugo.io/) and install in `themes` folder. I will choose **Hugo Stack Theme** for the demonstration.
 
 Copy the theme's github path, and install:
@@ -84,7 +87,7 @@ Go to the installed theme directory, you will see the `exampleSite` folder. Copy
 
 Replace `config.toml` by `config.yaml` copied above, and modify this file as in [this intruction](https://docs.stack.jimmycai.com/).
 
-### Publish to Github Page
+## Publish to Github Page
 After you add a post or a site, it's time to push into the repository and publish. But first, we have to link the Github page repository to the current development repository:
 ```
 git submodule add -b master https://github.com/username/username.github.io.git public
@@ -137,7 +140,7 @@ git add .
 git commit -m "$msg"
 git push origin master
 ```
-## Modification
+# Modification
 You can also modify the theme to suit your need. All documentations is on these websites:
 - https://docs.stack.jimmycai.com/
 - https://gohugo.io/documentation/
