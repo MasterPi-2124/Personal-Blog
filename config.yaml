@@ -24,7 +24,7 @@ params:
         - post
     featuredImageField: image
     rssFullContent: true
-    favicon:
+    favicon: /img/logo.jpg
 
     footer:
         since: 2021
@@ -126,7 +126,7 @@ params:
             limit: 20
         
         subscribe:
-            tinyletter: https://tinyletter.com/masterpi007
+            mailchimp: https://mailchi.mp/a54b51f2c263/thejournney
 
     opengraph:
         twitter:
