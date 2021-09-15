@@ -17,7 +17,7 @@ date: {{ .Date }}
 # Date published. Before that day, the post can not be available
 publishDate: 
 
-# Daye expired. After that day, the post cab not be available
+# Daye expired. After that day, the post can not be available
 expiryDate:
 
 # Last modified time of the file
