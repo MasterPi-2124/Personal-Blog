@@ -1,6 +1,6 @@
 ---
 # Name of the article
-title: "Story behind my TEDx event"
+title: "Story Behind My TEDx Event"
 
 # Quick description
 description: If they can do it, so can you? It depends.
