@@ -80,7 +80,7 @@ The detail explaination for each folder is published on [Hugo documentation](htt
 Next, we wll pick a theme at [Hugo theme website](https://themes.gohugo.io/) and install in `themes` folder. I will choose **Hugo Stack Theme** for the demonstration.
 
 Copy the theme's github path, and install:
-```
+```bash
 git submodule add https://github.com/CaiJimmy/hugo-theme-stack themes/hugo-theme-stack
 ```
 Go to the installed theme directory, you will see the `exampleSite` folder. Copy its content and paste into `content` folder. It stores all page and post we create for the website, so we will use it to test the new site.
@@ -89,7 +89,7 @@ Replace `config.toml` by `config.yaml` copied above, and modify this file as in 
 
 ## Publish to Github Page
 After you add a post or a site, it's time to push into the repository and publish. But first, we have to link the Github page repository to the current development repository:
-```
+```bash
 git submodule add -b master https://github.com/username/username.github.io.git public
 ```
 
@@ -100,45 +100,40 @@ origin	https://github.com/username/username.github.io.git (fetch)
 origin	https://github.com/username/username.github.io.git (push)
 ```
 Then publish the site by running `./deploy.sh`:
-```
+```bash
 #!/bin/sh
 
 # If a command fails then the deploy stops
 set -e
 
+# Build the project
 printf "\033[0;32mDeploying updates to GitHub...\033[0m\n"
+hugo -D --buildFuture
 
-# Create commit message
-msg="rebuilding site $(date)"
-if [ -n "$*" ]; then
-	msg="$*"
-fi
-
-# Build the project.
 echo ""
-echo ""
-echo "Committing changes to $(pwd)"
-hugo -D
 
-# Go To Public folder
+# Commit and push to GitHub Page repository
+printf "\033[0;32mGo to /public...\033[0m\n"
 cd public
-
-# Add 'public' (Github Pages repo) changes to git and commit/push.
-echo ""
-echo ""
-echo "Committing changes to $(pwd)"
 git add .
+echo ""
+read -p "Enter your commit message: " msg
+echo "\033[0;32mCommitting changes...\033[0m\n"
 git commit -m "$msg"
-git push origin master
+git push
+echo ""
 
-# Add this repos changes to git and commit/push. First 'cd' out of public
+# Commit and push to site repository
+printf "\033[0;32mGo to root...\033[0m\n"
 cd ..
-echo ""
-echo ""
-echo "Committing changes to $(pwd)"
 git add .
+echo ""
+read -p "Enter your commit message: " msg
+echo "\033[0;32mCommitting changes...\033[0m\n"
 git commit -m "$msg"
-git push origin master
+git push
+printf "\033[0;32mChanges are commited and push successfully! Go to https://username.github.io to see.\033[0m\n"
+printf "\033[0;32mFinishing...\033[0m\n"
 ```
 # Modification
 You can also modify the theme to suit your need. All documentations is on these websites:
@@ -146,5 +141,5 @@ You can also modify the theme to suit your need. All documentations is on these 
 - https://gohugo.io/documentation/
 
 Here is my work:
-- [The blog sourece code](https://github.com/MasterPi-2124/Personal-Blog)
+- [The blog source code](https://github.com/MasterPi-2124/Personal-Blog)
 - [The Github Page repository](https://github.com/MasterPi-2124/MasterPi-2124.github.io)

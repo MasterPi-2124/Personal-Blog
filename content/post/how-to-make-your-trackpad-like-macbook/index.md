@@ -75,7 +75,7 @@ The configuration file gets placed in `/usr/share/X11/xorg.conf.d/50-mtrack.conf
 sudo nano /usr/share/X11/xorg.conf.d/50-mtrack.conf
 ```
 The configuration file should be in this form (mine):
-```
+```bash
 # https://github.com/p2rkw/xf86-input-mtrack
 Section		"InputClass"
 MatchIsTouchpad	"on"

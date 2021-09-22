@@ -52,7 +52,7 @@ params:
 
     comments:
         enabled: true
-        provider: disqus
+        provider: giscus
 
         disqusjs:
             shortname:
@@ -101,16 +101,17 @@ params:
             path:
             lang:
 
+        # Parameter detail can be found at https://giscus.app/        
         giscus:
-            repo:
-            repoID:
-            category:
-            categoryID:
+            repo: MasterPi-2124/MasterPi-2124.github.io
+            repoID: MDEwOlJlcG9zaXRvcnk0MDQwNDgxMjM=
+            category: General
+            categoryID: DIC_kwDOGBVI-84B_HDA
             mapping:
             lightTheme:
             darkTheme:
             reactionsEnabled: 1
-            emitMetadata: 0
+            emitMetadata: 1
 
     widgets:
         enabled:

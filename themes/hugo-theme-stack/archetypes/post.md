@@ -45,5 +45,8 @@ math: false
 # Cover image of the article
 image: 
 
+# License. Default: CC BY-NC-SA 4.0
+license:
+
 ---
 

@@ -1,9 +1,9 @@
 ---
 # Name of the article
-title: "Getting Used To GitHub, Eps. 1"
+title: "Getting Used to GitHub, Eps. 1"
 
 # Quick description
-description: 
+description: Getting started
 
 # Author of the article
 author: Master Pi
@@ -29,6 +29,7 @@ lastmod:
 tags: 
     - git
     - github 101
+    - commit
 
 # Article's categories: Blog, Project or Guideline
 categories:
@@ -59,19 +60,22 @@ You may don't need to read this part, but I still write for who want to see what
 `Github`, `Gitlab`, `BitBucket` are code collaboration and version control tools offering repository management. In this guide, we will focus on `Github`, because it is quite popular (not really true), and quite suitable for starters. But I always reccommend you to try the other options, especially `Gitlab`, and you can decide yourself later.
 
 # Install git
-First, let's start by having `git` on our machine.
+First, let's start by getting `git` on our machine.
+
+
+* If you are Mac user and have Homebrew installed
 ```bash
-# If you are Mac user and have Homebrew installed
 brew install git
-
-# If you use Linux, many distros have git installed for you. If not, try installing via package management. For example:
-sudo apt install git
-
-# If you use Windows, follow instruction on https://git-scm.com/download/win
 ```
+* If you use Linux, many distros have git installed for you. If not, try installing via package management. For example:
+```bash
+sudo apt install git
+```
+* If you use Windows, follow instruction on https://git-scm.com/download/win.
+
 There are also GUI version of git, but I reccommend CLI, for two reasons:
 * It looks cooler than GUI
-* Almost every git guideline is by commands, so CLI help you understand better.
+* Almost every git guideline is by commands, so CLI help you understand git better.
 
 # Getting started
 Once you got `git` installed, let's dive in.
@@ -111,7 +115,7 @@ git clone URL_TO_YOUR_PROJECT
 ```
 It will create a folder and download all the content of the project into that folder.
 
-## Basic commands
+## Commit
 So you got you project. Let's make some changes in it. After you complete, you may need to snapshot it to a "***commit***", like a version of the project, or a checkpoint (if you are a gamer), which will track any changes in there. From that, you can easily trace or go back if you code is not working.
 
 In `git`, you may see the term "***stage***". Think it like actors about to perform on stage. They first have to stay in a room behind the stage to prepare, and "***stage***" in `git` is like that too. When you working on changes, you first have to place your file into a place called "***stage***" before taking a snapshot.
@@ -125,7 +129,7 @@ git add .
 # Create a commit with a message
 git commit -m "Your message"
 ```
-You may see the file named ".gitingnore" in your project. This file will contain folders and files you don't want to track (add to stage), so when you run `git add .`, it will add all changed file which are not in the file, to stage. Here is an example of this file:
+You may see the file named *.gitingnore* in your project. This file will contain folders and files you don't want to track (add to stage), so when you run `git add .`, it will add all changed file which are not in the file, to stage. Here is an example of this file:
 ```bash
 # Binaries for programs and plugins
 *.exe
@@ -160,7 +164,7 @@ git log
 Don't worry, we will discuss about ***branch*** later.
 ![Example output of git log](commit.png)
 
-You may see "`HEAD`". It is like a pointer. For example, you are currently at commit "Commit 1", so `HEAD` will point to this commit.
+You may see `HEAD`. It is like a pointer. For example, you are currently at commit "Commit 1", so `HEAD` will point to this commit.
 ![HEAD - like a pointer](HEAD.png)
 
 You can see details of a commit, by running this:

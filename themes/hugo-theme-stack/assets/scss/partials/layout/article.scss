@@ -314,6 +314,7 @@
     }
 
     code {
+        
         color: var(--code-text-color);
         background-color: var(--code-background-color);
         padding: 2px 4px;
@@ -339,6 +340,8 @@
 
     pre {
         overflow-x: auto;
+        overflow-y: auto;
+        max-height: 800px;
         display: block;
         background-color: var(--pre-background-color);
         color: var(--pre-text-color);
