@@ -174,6 +174,17 @@ git show COMMIT_ADDRESS
 
 While `COMMIT_ADDRESS` is the string of characters right after "commit", or you just use `HEAD` for current commit.
 
+If you want to undo commit, or return to a previous commit, run this command:
+```bash
+git reset --soft COMMIT_ADDRESS
+```
+or
+```bash
+git reset --soft HEAD~n
+# n is number of last commits you want to undo
+```
+
+
 # Final words
 So above is "**Getting used to Github**", eps. 1. I really want to show more, but a rule in my blog that every post should not exceed 20 minutes read, and I am revising for exam too, I have to spend other usefull commands on next post. You can subscribe to read other articles in the future.
 
