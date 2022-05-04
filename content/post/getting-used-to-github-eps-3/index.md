@@ -9,7 +9,7 @@ description: Merge and Merge Conflicts
 author: Dung Dao Minh
 
 # Appears as the tail of the output URL.
-slug: "getting-used-to-github-eps-2"
+slug: "getting-used-to-github-eps-3"
 
 # Date created
 date: 2022-05-04T21:55:37+07:00
