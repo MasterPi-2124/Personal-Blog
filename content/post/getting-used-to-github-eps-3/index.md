@@ -202,12 +202,12 @@ The obvious solution is to use the code in `develop` instead of that code on `lo
 A quicker way is to use additional flags, in favor of one of the branch (`ours` strategy refer to preference of the current branch, and `theirs` is the preference of the incoming branch):
 ```bash
 git merge --strategy=ours develop
-git merge -X theirs branchB
+git merge -X theirs develop
 ```
 **Note:** `-s` or `--strategy` completely ignore the other side, while `-X` or `--strategy-option` resolve any conflicts using the chosen side.
 
 ## Additional note: `merge` vs `rebase`, and options for `git pull`
-Perhaps some animation is great here (acknowledgement to [Nicola Paolucci's post](https://blog.developer.atlassian.com/pull-request-merge-strategies-the-great-debate/)  with the animations):
+Perhaps some animation is great here (acknowledgement to [Nicola Paolucci's post](https://blog.developer.atlassian.com/pull-request-merge-strategies-the-great-debate/)  with the animations). Click on animated images to see how it works:
 ![Merge](merge.gif)
 ![Rebase](rebase.gif)
 
